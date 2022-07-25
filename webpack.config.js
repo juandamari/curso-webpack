@@ -21,9 +21,10 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/i, //expresión regular 
+                test: /\.css|.styl/i, //expresión regular 
                 use: [MiniCssExtractPlugin.loader,
-                'css-loader'], //el "use" se puede usar con un objeto {} o un arreglo []
+                'css-loader',
+                'stylus-loader'], //el "use" se puede usar con un objeto {} o un arreglo []
             }
         ]
     },
