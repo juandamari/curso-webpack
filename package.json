@@ -5,12 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "build": "webpack --mode production"
-=======
     "build": "webpack --mode production",
     "dev": "webpack --mode development"
->>>>>>> f335607d5ce186781488a6ea43ee2736e57de247
   },
   "repository": {
     "type": "git",
@@ -32,15 +28,12 @@
     "@babel/plugin-transform-runtime": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
     "babel-loader": "^8.2.5",
-<<<<<<< HEAD
-=======
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "stylus": "^0.58.1",
     "stylus-loader": "^7.0.0",
     "webpack": "^5.74.0",
->>>>>>> f335607d5ce186781488a6ea43ee2736e57de247
     "webpack-cli": "^4.10.0"
   }
 }
