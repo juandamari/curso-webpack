@@ -1,7 +1,7 @@
-import getData from '../utils/getData.js';
-import githup from '../assets/images/github.png';
-import insta from '../assets/images/instagram.png';
-import twitter from '../assets/images/twitter.png'
+import getData from '@utils/getData.js';
+import githup from '@images/github.png';
+import insta from '@images/instagram.png';
+import twitter from '@images/twitter.png'; //@iamges estoy usando los alias para tener optimizado la ubicacion de los archivos
 
 const Template = async () => {
   const data = await getData();
