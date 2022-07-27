@@ -1,4 +1,5 @@
-const API = process.env.API; //ocultando la url de la API para que no sea visible para los usarios
+const API = process.env.API;
+  //process.env.API; //ocultando la url de la API para que no sea visible para los usarios
 
 const getData = async (id) => {
   const apiURl = id ? `${API}${id}` : API;

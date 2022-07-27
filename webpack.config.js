@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const cssMinimazerplugin = require('css-minimizer-webpack-plugin');//comprimir archivos css
 const terserPlugin = require('terser-webpack-plugin');//comprimir archivos js
 const dontenv = require('dotenv-webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //tener cuidado con el nombre para que el plugin funcione 
 
 module.exports = {
     entry: './src/index.js',
@@ -75,6 +76,7 @@ module.exports = {
             ]
         }),
         new dontenv(),
+        new CleanWebpackPlugin(), 
     ],
     optimization: { //se agrega otro paquete donde son plugins de optimizaciòn
         minimize: true,
