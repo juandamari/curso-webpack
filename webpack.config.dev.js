@@ -12,7 +12,7 @@ module.exports = {
         assetModuleFilename: 'assets/images/[hash][ext][query]',
     },
     mode: 'development', //le agrego la configuracion de este archivo y modificado en package.json le cambio la direccion de dev a esta y me dara un nuevo archivo con los codigos mas ordenados para debugear si es necesario algo
-    /* watch: true, */ //con este esta pendiente de los cambios, sin necesidad de estar en la consola haciendo run
+    watch: true, //con este esta pendiente de los cambios, sin necesidad de estar en la consola haciendo run
     resolve: {
         extensions: ['.js'],
         alias: { //para darle una mejor ubicaciòn a los archivos con import, identificar cuales son las que necesitan esta funcion
@@ -76,10 +76,11 @@ module.exports = {
         }),
         new dontenv(),
     ],
-    devServer: {
+    devServer: { //genero una pagina controlada, donde puedo ir viendo en tiempo real los cambios q genero de ella misma
         static: path.join(__dirname, 'dist'),
         compress: true,
         historyApiFallback: true,
         port: 3006,
+        open: true,
     },
 }
