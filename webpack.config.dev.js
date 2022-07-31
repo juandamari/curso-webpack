@@ -76,10 +76,9 @@ module.exports = {
         }),
         new dontenv(),
     ],
-    devServer : {
+    devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         historyApiFallback: true,
-        port: 3006,
     },
 }
