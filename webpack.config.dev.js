@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');//agregando el plugin w
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');//agregando el plugin de css mini
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const dontenv = require('dotenv-webpack');
+const bundleAnalyzerPlugin = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: './src/index.js',
@@ -12,6 +13,7 @@ module.exports = {
         assetModuleFilename: 'assets/images/[hash][ext][query]',
     },
     mode: 'development', //le agrego la configuracion de este archivo y modificado en package.json le cambio la direccion de dev a esta y me dara un nuevo archivo con los codigos mas ordenados para debugear si es necesario algo
+    devtool: 'source-map', //me ayuda a generar un mapa dentro de mi proyectyo en formato json
     watch: true, //con este esta pendiente de los cambios, sin necesidad de estar en la consola haciendo run
     resolve: {
         extensions: ['.js'],
@@ -75,6 +77,7 @@ module.exports = {
             ]
         }),
         new dontenv(),
+        new bundleAnalyzerPlugin.BundleAnalyzerPlugin(),
     ],
     devServer: { //genero una pagina controlada, donde puedo ir viendo en tiempo real los cambios q genero de ella misma
         static: path.join(__dirname, 'dist'),

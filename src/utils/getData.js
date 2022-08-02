@@ -1,4 +1,4 @@
-const API = process.env.API;
+const API = 'https://randomuser.me/api/';
   //process.env.API; //ocultando la url de la API para que no sea visible para los usarios
 
 const getData = async (id) => {
