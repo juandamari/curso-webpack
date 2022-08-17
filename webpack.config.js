@@ -14,6 +14,7 @@ module.exports = {
         filename: '[name][contenthash].js',
         assetModuleFilename: 'assets/images/[hash][ext][query]',
     },
+    mode: 'development', //le agrego la configuracion de este archivo y modificado en package.json le cambio la direccion de dev a esta y me dara un nuevo archivo con los codigos mas ordenados para debugear si es necesario algo
     resolve: {
         extensions: ['.js'],
         alias: { //para darle una mejor ubicaciòn a los archivos con import, identificar cuales son las que necesitan esta funcion
